@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT Perkasa Nusantara Sejahtera · LCD Panel B2B</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <form name="panelPenawaran" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="nama" />
+    <input type="tel" name="wa" />
+    <input type="text" name="lokasi" />
+    <select name="jenisPanel">
+      <option value=""></option>
+      <option value="LCD">LCD</option>
+      <option value="LED">LED</option>
+      <option value="OLED">OLED</option>
+    </select>
+    <select name="kondisiPanel">
+      <option value=""></option>
+      <option value="baru">Baru</option>
+      <option value="bekas">Bekas</option>
+    </select>
+    <select name="ukuranPanel">
+      <option value=""></option>
+      <option value="15">15</option>
+      <option value="19">19</option>
+      <option value="21.5">21.5</option>
+      <option value="24">24</option>
+      <option value="27">27</option>
+      <option value="32">32</option>
+      <option value="40">40</option>
+      <option value="43">43</option>
+      <option value="49">49</option>
+      <option value="55">55</option>
+      <option value="65">65</option>
+    </select>
+    <select name="resolusiPanel">
+      <option value=""></option>
+      <option value="HD">HD</option>
+      <option value="Full HD">Full HD</option>
+      <option value="4K">4K</option>
+    </select>
+    <select name="teknologiPanel">
+      <option value=""></option>
+      <option value="IPS">IPS</option>
+      <option value="VA">VA</option>
+      <option value="TN">TN</option>
+    </select>
+    <input type="text" name="merkPanel" />
+    <input type="text" name="modelPanel" />
+    <input type="number" name="jumlahUnit" />
+    <input type="number" name="hargaUnit" />
+    <input type="file" name="fotoPanel" />
+    <textarea name="keterangan"></textarea>
+  </form>
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        PT PERKASA NUSANTARA SEJAHTERA
+        <span class="logo-tagline">Industrial LCD Exchange</span>
+      </div>
+      <div class="nav-links">
+        <a class="nav-link active" data-section="home">Beranda</a>
+        <a class="nav-link" data-section="profile">Profil Perusahaan</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- modal detail -->
+  <div id="detailModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h2 class="accent" id="modalMerk">Detail Panel</h2>
+      <div id="modalDetailContainer"></div>
+      <button class="wa-button" id="modalWaBtn">📱 Hubungi via WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- HOME SECTION -->
+  <section id="homeSection" class="section active container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1>Jual LCD Panel Anda Harga Terbaik</h1>
+      <p class="hero-subtitle">Kami membeli LCD panel TV dan monitor dalam jumlah besar — baru maupun bekas. Proses cepat, pembayaran dilakukan setelah cek fisik langsung di lokasi Anda.</p>
+      <div class="hero-buttons">
+        <a href="#formSection" class="btn-primary hero-btn-primary">Kirim Penawaran Sekarang</a>
+        <a href="#ketentuanSection" class="btn-outline hero-btn-outline">Lihat Syarat & Ketentuan</a>
+      </div>
+    </div>
+
+    <!-- KETENTUAN & CARA KERJA (flexbox) -->
+    <div class="info-flex" id="ketentuanSection">
+      <!-- KETENTUAN -->
+      <div class="info-block">
+        <h2 class="accent">KETENTUAN</h2>
+        <p class="info-subtitle">Syarat Panel yang Kami Beli</p>
+        <div class="info-list">
+          <div class="info-item">
+            <h4>100% Unit Hidup / Nyala</h4>
+            <p>Semua unit yang ditawarkan wajib dalam kondisi hidup dan dapat menyala dengan normal.</p>
+          </div>
+          <div class="info-item">
+            <h4>Model Single Socket</h4>
+            <p>Panel yang kami terima harus bertipe single socket / satu soket konektor.</p>
+          </div>
+          <div class="info-item">
+            <h4>Minimum 500 pcs per Nota</h4>
+            <p>Kami hanya memproses transaksi dengan jumlah minimal 500 unit per satu nota pembelian.</p>
+          </div>
+          <div class="info-item">
+            <h4>Bayar Setelah Cek di Lokasi</h4>
+            <p>Pembayaran dilakukan setelah kami melakukan pengecekan fisik dan test live langsung di lokasi Anda.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARA KERJA -->
+      <div class="info-block">
+        <h2 class="accent">CARA KERJA</h2>
+        <p class="info-subtitle">Proses Mudah & Transparan</p>
+        <div class="steps">
+          <div class="step-item">
+            <span class="step-number">1.</span>
+            <div>
+              <h4>Kirim Penawaran</h4>
+              <p>Isi form penawaran dengan data lengkap spesifikasi dan jumlah panel Anda.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <span class="step-number">2.</span>
+            <div>
+              <h4>Kami Hubungi Anda</h4>
+              <p>Tim kami akan menghubungi Anda via WhatsApp untuk konfirmasi dan negosiasi harga.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <span class="step-number">3.</span>
+            <div>
+              <h4>Jadwalkan Pengecekan</h4>
+              <p>Kami datang ke lokasi Anda untuk melakukan cek fisik dan test live panel.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <span class="step-number">4.</span>
+            <div>
+              <h4>Pembayaran Langsung</h4>
+              <p>Setelah pengecekan selesai dan sepakat, pembayaran dilakukan di tempat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- filter -->
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label>Ukuran</label>
+        <select id="filterUkuran">
+          <option value="all">Semua Ukuran</option>
+          <option value="kecil">&lt;32"</option>
+          <option value="sedang">32" - 49"</option>
+          <option value="besar">≥50"</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Kondisi</label>
+        <select id="filterKondisi">
+          <option value="all">Semua</option>
+          <option value="baru">Baru</option>
+          <option value="bekas">Bekas</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- grid listing -->
+    <div id="listingContainer" class="listing-grid"></div>
+    <div id="emptyMessage" class="text-muted" style="text-align:center; padding: 3rem;">Belum ada penawaran yang tersedia.</div>
+
+    <!-- FORMULIR PENAWARAN (dengan Netlify Forms) -->
+    <div class="form-section" id="formSection">
+      <h2 class="accent">FORMULIR PENAWARAN</h2>
+      <p class="subtitle">Kirim Data Panel Anda — Isi form di bawah ini dan tim kami akan menghubungi Anda via WhatsApp.</p>
+
+      <form 
+        id="penawaranForm" 
+        class="penawaran-form" 
+        name="panelPenawaran" 
+        action="/"
+        method="POST" 
+        netlify 
+        netlify-honeypot="bot-field"
+      >
+        <p class="hidden" style="display: none;">
+          <label>Jangan diisi jika Anda manusia: <input name="bot-field" /></label>
+        </p>
+        <input type="hidden" name="form-name" value="panelPenawaran" />
+
+        <!-- DATA PENJUAL -->
+        <div class="form-block">
+          <h3>DATA PENJUAL</h3>
+          <div class="row-2">
+            <div class="form-group">
+              <label>Nama Lengkap <span class="required">*</span></label>
+              <input type="text" name="nama" required placeholder="Nama Anda">
+            </div>
+            <div class="form-group">
+              <label>No. WhatsApp <span class="required">*</span></label>
+              <input type="tel" name="wa" required placeholder="6281234567890">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Kota / Lokasi Barang</label>
+            <input type="text" name="lokasi" placeholder="Jakarta, Surabaya, dll">
+          </div>
+        </div>
+
+        <!-- SPESIFIKASI PANEL -->
+        <div class="form-block">
+          <h3>SPESIFIKASI PANEL</h3>
+          <div class="row-2">
+            <div class="form-group">
+              <label>Jenis Panel <span class="required">*</span></label>
+              <select name="jenisPanel" required>
+                <option value="">Pilih jenis</option>
+                <option value="LCD">LCD</option>
+                <option value="LED">LED</option>
+                <option value="OLED">OLED</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Kondisi <span class="required">*</span></label>
+              <select name="kondisiPanel" required>
+                <option value="">Pilih kondisi</option>
+                <option value="baru">Baru</option>
+                <option value="bekas">Bekas</option>
+              </select>
+            </div>
+          </div>
+          <div class="row-2">
+            <div class="form-group">
+              <label>Ukuran (Inch) <span class="required">*</span></label>
+              <select name="ukuranPanel" required>
+                <option value="">Pilih ukuran</option>
+                <option value="15">15"</option>
+                <option value="19">19"</option>
+                <option value="21.5">21.5"</option>
+                <option value="24">24"</option>
+                <option value="27">27"</option>
+                <option value="32">32"</option>
+                <option value="40">40"</option>
+                <option value="43">43"</option>
+                <option value="49">49"</option>
+                <option value="55">55"</option>
+                <option value="65">65"</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Resolusi</label>
+              <select name="resolusiPanel">
+                <option value="">Pilih resolusi</option>
+                <option value="HD">HD (1366x768)</option>
+                <option value="Full HD">Full HD (1920x1080)</option>
+                <option value="4K">4K (3840x2160)</option>
+              </select>
+            </div>
+          </div>
+          <div class="row-2">
+            <div class="form-group">
+              <label>Teknologi Panel</label>
+              <select name="teknologiPanel">
+                <option value="">Pilih teknologi</option>
+                <option value="IPS">IPS</option>
+                <option value="VA">VA</option>
+                <option value="TN">TN</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Merek Panel</label>
+              <input type="text" name="merkPanel" placeholder="Samsung, LG, BOE, dll">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Nomor Model / Part Number</label>
+            <input type="text" name="modelPanel" placeholder="Misal: LM320WX5">
+          </div>
+        </div>
+
+        <!-- JUMLAH & HARGA -->
+        <div class="form-block">
+          <h3>JUMLAH & HARGA</h3>
+          <div class="row-2">
+            <div class="form-group">
+              <label>Jumlah Unit (pcs) <span class="required">*</span></label>
+              <input type="number" name="jumlahUnit" required min="500" placeholder="Min. 500 pcs">
+            </div>
+            <div class="form-group">
+              <label>Harga yang Diminta / unit (opsional)</label>
+              <input type="number" name="hargaUnit" min="0" placeholder="Rp 0">
+            </div>
+          </div>
+          <p class="note">Minimum transaksi 500 pcs per nota</p>
+        </div>
+
+        <!-- FOTO & CATATAN -->
+        <div class="form-block">
+          <h3>FOTO & CATATAN</h3>
+          <div class="form-group">
+            <label>Upload Foto Panel</label>
+            <input type="file" name="fotoPanel" accept="image/*">
+            <small class="info">Opsional, maks 2MB</small>
+          </div>
+          <div class="form-group">
+            <label>Keterangan Tambahan</label>
+            <textarea name="keterangan" rows="4" placeholder="Kondisi panel, riwayat pemakaian, atau info lainnya..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary submit-btn">Kirim Penawaran</button>
+        <div id="formFeedback" class="form-feedback"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- PROFILE SECTION (Perusahaan) -->
+  <section id="profileSection" class="section container">
+    <div class="profile-container">
+      <!-- about company -->
+      <div class="profile-card">
+        <h2 class="accent">1. ABOUT OUR COMPANY</h2>
+        <p>Established in 2006, located in Tangerang, an energetic and never stop developing city in the southern part of Indonesia.</p>
+        <p><strong>PT PERKASA NUSANTARA SEJAHTERA</strong> is committed to be a professional and reliable TV, Monitor and Multimedia Speaker manufacturing enterprise providing one-stop-shop service to our business partners. With our experienced R&D engineers and sophisticated production and quality assurance team, we are capable and always ready to serve different needs of our customers.</p>
+        <p>After long experience in design and manufacturing electronic products, we established in 2016 to expand our capability to commercial electronic product category. Our strong research team designs and keep improving our products with comprehensive study of user habits and market trend. We focus and invest our resources and revolution and innovation of TV product. Our mission is to provide the best quality at competitive price in lokal and Asian market.</p>
+        <p>Innovation, quality, and commitment are our key success factors. We always do our best to create and maintain win-win strategy and environment with all of our customers. During the past years, we keep growing and gained trust and respect from our customers accross the continents through our good and advanced product design, stringent quality control, on time delivery, tailor made service with competitive price. In order to support our customers better and meets the market needs, we have moved to a new manufacturing plant last year with higher efficiency and more advance production and quality assurance facilitie. We will continue our commitment and focus all our resources to be strong back up of our customers!</p>
+      </div>
+
+      <!-- our product -->
+      <div class="profile-card">
+        <h2 class="accent">2. OUR PRODUCT</h2>
+        <p>Kami menawarkan berbagai solusi televisi sesuai kebutuhan anda</p>
+        <div class="product-grid">
+          <div class="product-item">
+            <h3>Kapasitas Tampilan & Kualitas Gambar</h3>
+            <ul>
+              <li>Layar: 15–43 inch</li>
+              <li>Resolusi Full HD / 4K</li>
+              <li>Menampilkan lebih banyak konten web</li>
+              <li>Dapat berfungsi sebagai monitor eksternal</li>
+            </ul>
+          </div>
+          <div class="product-item">
+            <h3>Konektivitas & Perangkat Input</h3>
+            <ul>
+              <li>Port HDMI untuk PC/laptop</li>
+              <li>Port USB untuk mouse/keyboard</li>
+              <li>Mendukung Bluetooth keyboard & mouse</li>
+              <li>Support Wi-Fi 2.4 GHz & 5 GHz</li>
+            </ul>
+          </div>
+          <div class="product-item">
+            <h3>Kemampuan Browser & Sistem</h3>
+            <ul>
+              <li>Sistem Smart TV mendukung browser modern</li>
+              <li>Bisa akses web apps (PWA) seperti Google Docs & WhatsApp Web</li>
+              <li>Multitask split-screen di OS tertentu</li>
+              <li>Konsumsi daya lebih rendah dibanding monitor besar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="highlight">
+          <p><strong>SOLUSI ANDROID TV MODERN & JERNIH</strong></p>
+          <p>Menghadirkan Produk Televisi berkualitas tinggi untuk rumah, bisnis, dan industri.</p>
+        </div>
+      </div>
+
+      <!-- service center -->
+      <div class="profile-card">
+        <h2 class="accent">SERVICE CENTER</h2>
+        <div class="service-grid">
+          <div class="service-item"><strong>TANGERANG</strong> – JL. PANTAI INDAH DADAP</div>
+          <div class="service-item"><strong>PEKANBARU</strong> – JL. TODAK KOMPLEK TPI</div>
+          <div class="service-item"><strong>JAMBI</strong> – JL. KOMP. POLA BESTARI LRG SIGUNTANG</div>
+          <div class="service-item"><strong>SURABAYA</strong> – JL. RAYA TUBAGUS ANGKE KOMP. TPI 1</div>
+          <div class="service-item"><strong>SEMARANG</strong> – JL. TUSAM 1358 PLAMONGAN INDAH</div>
+          <div class="service-item"><strong>MEDAN</strong> – JL. SEI KERA NO. 128 G</div>
+          <div class="service-item"><strong>SUMATERA - KALIMANTAN</strong> – YUDI 085694666638</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 PT Perkasa Nusantara Sejahtera — Industrial LCD Panel Exchange. All rights reserved.
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
