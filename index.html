@@ -7,54 +7,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <form name="panelPenawaran" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="nama" />
-    <input type="tel" name="wa" />
-    <input type="text" name="lokasi" />
-    <select name="jenisPanel">
-      <option value=""></option>
-      <option value="LCD">LCD</option>
-      <option value="LED">LED</option>
-      <option value="OLED">OLED</option>
-    </select>
-    <select name="kondisiPanel">
-      <option value=""></option>
-      <option value="baru">Baru</option>
-      <option value="bekas">Bekas</option>
-    </select>
-    <select name="ukuranPanel">
-      <option value=""></option>
-      <option value="15">15</option>
-      <option value="19">19</option>
-      <option value="21.5">21.5</option>
-      <option value="24">24</option>
-      <option value="27">27</option>
-      <option value="32">32</option>
-      <option value="40">40</option>
-      <option value="43">43</option>
-      <option value="49">49</option>
-      <option value="55">55</option>
-      <option value="65">65</option>
-    </select>
-    <select name="resolusiPanel">
-      <option value=""></option>
-      <option value="HD">HD</option>
-      <option value="Full HD">Full HD</option>
-      <option value="4K">4K</option>
-    </select>
-    <select name="teknologiPanel">
-      <option value=""></option>
-      <option value="IPS">IPS</option>
-      <option value="VA">VA</option>
-      <option value="TN">TN</option>
-    </select>
-    <input type="text" name="merkPanel" />
-    <input type="text" name="modelPanel" />
-    <input type="number" name="jumlahUnit" />
-    <input type="number" name="hargaUnit" />
-    <input type="file" name="fotoPanel" />
-    <textarea name="keterangan"></textarea>
-  </form>
 
   <!-- navbar -->
   <nav class="navbar">
@@ -185,14 +137,14 @@
       <h2 class="accent">FORMULIR PENAWARAN</h2>
       <p class="subtitle">Kirim Data Panel Anda — Isi form di bawah ini dan tim kami akan menghubungi Anda via WhatsApp.</p>
 
-      <form 
-        id="penawaranForm" 
-        class="penawaran-form" 
-        name="panelPenawaran" 
-        action="/"
-        method="POST" 
-        netlify 
+      <form  
+        id="penawaranForm"
+        class="penawaran-form"
+        name="panelPenawaran"
+        method="POST"
+        data-netlify="true"
         netlify-honeypot="bot-field"
+        enctype="multipart/form-data"
       >
         <p class="hidden" style="display: none;">
           <label>Jangan diisi jika Anda manusia: <input name="bot-field" /></label>
