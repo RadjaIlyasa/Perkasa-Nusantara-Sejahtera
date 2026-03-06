@@ -11,7 +11,6 @@ body {
   line-height: 1.5;
 }
 
-/* warna aksen orange */
 .accent {
   color: #F4A261;
 }
@@ -131,6 +130,16 @@ body {
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto 2rem;
+  opacity: 0.95;
+}
+
+.hero-trust {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
   opacity: 0.95;
 }
 .hero-buttons {
@@ -395,6 +404,43 @@ body {
   border: 2px solid #128C7E;
 }
 
+.trust-block {
+  background: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 30px;
+  margin-top: 3rem;
+  border: 1px solid #E0E0E0;
+  text-align: center;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.trust-item {
+  background: #F8F9FA;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #E0E0E0;
+}
+
+.social-proof {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #0B3C5D;
+}
+.trust-item {
+  transition: 0.3s ease;
+}
+
+.trust-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
 /* form penawaran */
 .form-section {
   background: #FFFFFF;
@@ -508,6 +554,12 @@ body {
   color: #2e7d32;
   border: 1px solid #2e7d32;
 }
+.btn-primary {
+  transition: 0.3s ease;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+}
 
 /* profile section */
 .profile-container {
@@ -587,6 +639,28 @@ footer {
   border-top: 1px solid #E0E0E0;
   color: #666;
   font-size: 0.9rem;
+}
+
+.floating-wa {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.floating-wa:hover {
+  transform: scale(1.1);
 }
 
 .text-muted {

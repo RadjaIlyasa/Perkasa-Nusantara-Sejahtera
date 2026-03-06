@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PT Perkasa Nusantara Sejahtera · LCD Panel B2B</title>
+  <meta name="description" content="Kami membeli LCD dan LED panel dalam jumlah besar. Minimum 500 unit. Hubungi kami untuk penawaran.">
+  <title>PT Perkasa Nusantara Sejahtera · Pembelian LCD Panel TV & Monitor</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- navbar -->
-  <nav class="navbar">
+  <nav class="navbar" data-aos="fade-down">
     <div class="container nav-container">
       <div class="logo">
         PT PERKASA NUSANTARA SEJAHTERA
@@ -33,19 +36,32 @@
   </div>
 
   <!-- HOME SECTION -->
-  <section id="homeSection" class="section active container">
+  <section id="homeSection" class="section active container" data-aos="fade-in">
     <!-- Hero Section -->
-    <div class="hero-section">
-      <h1>Jual LCD Panel Anda Harga Terbaik</h1>
-      <p class="hero-subtitle">Kami membeli LCD panel TV dan monitor dalam jumlah besar — baru maupun bekas. Proses cepat, pembayaran dilakukan setelah cek fisik langsung di lokasi Anda.</p>
-      <div class="hero-buttons">
-        <a href="#formSection" class="btn-primary hero-btn-primary">Kirim Penawaran Sekarang</a>
-        <a href="#ketentuanSection" class="btn-outline hero-btn-outline">Lihat Syarat & Ketentuan</a>
-      </div>
-    </div>
+    <div class="hero-section" >
+  <h1>Kami Siap Membeli LCD / LED Panel Anda</h1>
+  <p class="hero-subtitle">
+    Minimum 500 Unit · 100% Nyala · Pembayaran Setelah Cek di Lokasi Anda
+  </p>
+
+  <div class="hero-trust">
+    <span>✔ Proses Cepat</span>
+    <span>✔ Tim Datang ke Lokasi</span>
+    <span>✔ Pembayaran di Tempat</span>
+  </div>
+
+  <div class="hero-buttons">
+    <a href="#formSection" class="btn-primary hero-btn-primary">
+      Kirim Penawaran Sekarang
+    </a>
+    <a href="#ketentuanSection" class="btn-outline hero-btn-outline">
+      Lihat Syarat & Ketentuan
+    </a>
+  </div>
+</div>
 
     <!-- KETENTUAN & CARA KERJA (flexbox) -->
-    <div class="info-flex" id="ketentuanSection">
+    <div class="info-flex" id="ketentuanSection" data-aos="fade-up">
       <!-- KETENTUAN -->
       <div class="info-block">
         <h2 class="accent">KETENTUAN</h2>
@@ -132,8 +148,31 @@
     <div id="listingContainer" class="listing-grid"></div>
     <div id="emptyMessage" class="text-muted" style="text-align:center; padding: 3rem;">Belum ada penawaran yang tersedia.</div>
 
+    <div class="trust-block" data-aos="fade-up">
+   <h2 class="accent">KENAPA JUAL KE KAMI?</h2>
+  <div class="trust-grid">
+    <div class="trust-item">
+      <h4>Transaksi Transparan</h4>
+      <p>Pengecekan dilakukan langsung di lokasi Anda.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Pembayaran Aman</h4>
+      <p>Pembayaran dilakukan setelah test live selesai.</p>
+    </div>
+    <div class="trust-item">
+      <h4>Tim Profesional</h4>
+      <p>Berpengalaman menangani pembelian panel skala besar.</p>
+    </div>
+  </div>
+</div>
+
+<div class="social-proof" data-aos="fade-up">
+  <p><strong>Melayani Berbagai Kota di Indonesia</strong></p>
+  <p>Tangerang · Jakarta · Surabaya · Medan · Pekanbaru · Jambi · Semarang · dan kota lainnya</p>
+</div>
+
     <!-- FORMULIR PENAWARAN (dengan Netlify Forms) -->
-    <div class="form-section" id="formSection">
+    <div class="form-section" id="formSection" data-aos="fade-up">
       <h2 class="accent">FORMULIR PENAWARAN</h2>
       <p class="subtitle">Kirim Data Panel Anda — Isi form di bawah ini dan tim kami akan menghubungi Anda via WhatsApp.</p>
 
@@ -161,7 +200,12 @@
             </div>
             <div class="form-group">
               <label>No. WhatsApp <span class="required">*</span></label>
-              <input type="tel" name="wa" required placeholder="6281234567890">
+              <input 
+                type="tel" 
+                name="wa" 
+                required 
+                pattern="^62[0-9]{9,13}$"
+                placeholder="6281234567890">
             </div>
           </div>
           <div class="form-group">
@@ -346,7 +390,22 @@
   <footer>
     © 2025 PT Perkasa Nusantara Sejahtera — Industrial LCD Panel Exchange. All rights reserved.
   </footer>
+  <a href="https://wa.me/62895324087406" 
+   class="floating-wa" 
+   target="_blank" 
+   data-aos="fade-left">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
   <script src="js/script.js"></script>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 </body>
 </html>

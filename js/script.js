@@ -18,6 +18,7 @@
       return defaultListings;
     }
   }
+  console.log("Form penawaran dikirim:", new Date());
 
   let listings = loadListings();
   const homeSection = document.getElementById('homeSection');
@@ -57,7 +58,7 @@
                 <span>🔲 ${item.ukuran}"</span><span>📺 ${item.resolusi}</span><span>⚙️ ${item.kondisi}</span>
               </div>
               <div class="card-footer">
-                <span class="harga">$${item.harga}</span><span class="stok">stok ${item.stok}</span>
+                <span class="harga">Rp ${item.harga.toLocaleString('id-ID')}</span><span class="stok">stok ${item.stok}</span>
               </div>
             </div>
           </div>
@@ -66,7 +67,16 @@
       listingContainer.innerHTML = html;
     }
   }
-
+  const ctaButton = document.querySelector('.cta-button') || document.querySelector('.hero-btn-primary');
+  if (ctaButton) {
+    ctaButton.addEventListener('click', function(e) {
+      // Keep anchor default behavior for in-page links, but smooth-scroll consistently.
+      e.preventDefault();
+      document.querySelector('#formSection')?.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  }
   // Modal
   const modal = document.getElementById('detailModal');
   const modalMerk = document.getElementById('modalMerk');
@@ -83,7 +93,7 @@
       <div class="detail-field"><span class="detail-label">Resolusi</span><span class="detail-value">${item.resolusi}</span></div>
       <div class="detail-field"><span class="detail-label">Kondisi</span><span class="detail-value">${item.kondisi}</span></div>
       <div class="detail-field"><span class="detail-label">Stok</span><span class="detail-value">${item.stok} pcs</span></div>
-      <div class="detail-field"><span class="detail-label">Harga/unit</span><span class="detail-value">$${item.harga}</span></div>
+      <div class="detail-field"><span class="detail-label">Harga/unit</span><span class="detail-value">Rp ${item.harga.toLocaleString('id-ID')}</span></div>
       <div class="detail-field"><span class="detail-label">Socket</span><span class="detail-value">Single socket (sesuai syarat)</span></div>
     `;
     modalWa.onclick = () => {
@@ -187,6 +197,15 @@
       }
     });
   }
+  const fotoInput = document.querySelector("input[name='fotoPanel']");
+    if (fotoInput) {
+      fotoInput.addEventListener("change", function(){
+        const file = this.files[0];
+         if(file){
+          console.log("Foto dipilih:", file.name);
+    }
+  });
+}
 
   filterUkuran.addEventListener('change', renderListings);
   filterKondisi.addEventListener('change', renderListings);
