@@ -1,13 +1,105 @@
 // js/script.js
 (function() {
   const STORAGE_KEY = 'panel_listings';
-  const defaultListings = [
-    { id: 'p1', merk: 'Samsung', tipe: 'LD320B', ukuran: 32, resolusi: '1920x1080', kondisi: 'bekas', stok: 1500, harga: 220, foto: '', wa: '628123456789', socket: 'single' },
-    { id: 'p2', merk: 'LG', tipe: 'LP470', ukuran: 43, resolusi: '3840x2160', kondisi: 'baru', stok: 800, harga: 450, foto: '', wa: '628987654321', socket: 'single' },
-    { id: 'p3', merk: 'BOE', tipe: 'HV550', ukuran: 55, resolusi: '3840x2160', kondisi: 'bekas', stok: 2000, harga: 510, foto: '', wa: '628112233445', socket: 'single' },
-    { id: 'p4', merk: 'AUO', tipe: 'T460', ukuran: 46, resolusi: '1920x1080', kondisi: 'baru', stok: 600, harga: 380, foto: '', wa: '628556677889', socket: 'single' },
-    { id: 'p5', merk: 'Sharp', tipe: 'LQ270', ukuran: 27, resolusi: '1366x768', kondisi: 'bekas', stok: 3200, harga: 115, foto: '', wa: '628998877665', socket: 'single' }
-  ];
+ const defaultListings = [
+  { 
+    id: 'p1',
+    merk: 'FAWS / GRADO',
+    tipe: 'LED TV 17/19 P MODEL',
+    ukuran: 19,
+    resolusi: 'HD',
+    kondisi: 'baru',
+    stok: 500,
+    harga: "Negotiable",
+    foto: 'images/led-17-19.jpg',
+    wa: '6285217464040',
+    socket: 'single'
+  },
+
+  { 
+    id: 'p2',
+    merk: 'FAWS / GRADO',
+    tipe: 'LED TV 21/22/27 S MODEL',
+    ukuran: 27,
+    resolusi: 'HD',
+    kondisi: 'baru',
+    stok: 500,
+    harga: "Negotiable",
+    foto: 'images/led-21-22-27.jpg',
+    wa: '6285217464040',
+    socket: 'single'
+  },
+
+  { 
+    id: 'p3',
+    merk: 'FAWS / GRADO',
+    tipe: 'LED TV 24 P2 MODEL',
+    ukuran: 24,
+    resolusi: 'HD',
+    kondisi: 'baru',
+    stok: 500,
+    harga: "Negotiable",
+    foto: 'images/led-24.jpg',
+    wa: '6285217464040',
+    socket: 'single'
+  },
+
+  { 
+    id: 'p4',
+    merk: 'FAWS / GRADO',
+    tipe: 'LED TV 32 ANDROID',
+    ukuran: 32,
+    resolusi: 'HD',
+    kondisi: 'baru',
+    stok: 500,
+    harga: "Negotiable",
+    foto: 'images/led-32.jpg',
+    wa: '6285217464040',
+    socket: 'single'
+  },
+
+  { 
+    id: 'p5',
+    merk: 'FAWS / GRADO',
+    tipe: 'LED TV 40 ANDROID',
+    ukuran: 40,
+    resolusi: 'FULL HD',
+    kondisi: 'baru',
+    stok: 500,
+    harga: "Negotiable",
+    foto: 'images/led-40.jpg',
+    wa: '6285217464040',
+    socket: 'single'
+  },
+
+  { 
+    id: 'p6',
+    merk: 'FAWS / GRADO',
+    tipe: 'LED TV 43 ANDROID',
+    ukuran: 43,
+    resolusi: 'FULL HD',
+    kondisi: 'baru',
+    stok: 500,
+    harga: "Negotiable",
+    foto: 'images/led-43.jpg',
+    wa: '6285217464040',
+    socket: 'single'
+  },
+
+  { 
+    id: 'p7',
+    merk: 'FAWS / GRADO',
+    tipe: 'LED TV 17/20 U MODEL',
+    ukuran: 20,
+    resolusi: 'HD',
+    kondisi: 'baru',
+    stok: 500,
+    harga: "Negotiable",
+    foto: 'images/led-17-20.jpg',
+    wa: '6285217464040',
+    socket: 'single'
+  }
+];
 
   function loadListings() {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -58,7 +150,8 @@
                 <span>🔲 ${item.ukuran}"</span><span>📺 ${item.resolusi}</span><span>⚙️ ${item.kondisi}</span>
               </div>
               <div class="card-footer">
-                <span class="harga">Rp ${item.harga.toLocaleString('id-ID')}</span><span class="stok">stok ${item.stok}</span>
+                <span class="harga">${typeof item.harga === 'number' ? 'Rp ' + item.harga.toLocaleString('id-ID') : item.harga}</span>
+                <span class="stok">stok ${item.stok}</span>
               </div>
             </div>
           </div>
@@ -93,8 +186,7 @@
       <div class="detail-field"><span class="detail-label">Resolusi</span><span class="detail-value">${item.resolusi}</span></div>
       <div class="detail-field"><span class="detail-label">Kondisi</span><span class="detail-value">${item.kondisi}</span></div>
       <div class="detail-field"><span class="detail-label">Stok</span><span class="detail-value">${item.stok} pcs</span></div>
-      <div class="detail-field"><span class="detail-label">Harga/unit</span><span class="detail-value">Rp ${item.harga.toLocaleString('id-ID')}</span></div>
-      <div class="detail-field"><span class="detail-label">Socket</span><span class="detail-value">Single socket (sesuai syarat)</span></div>
+<div class="detail-field"><span class="detail-label">Harga/unit</span><span class="detail-value">${typeof item.harga === 'number' ? 'Rp ' + item.harga.toLocaleString('id-ID') : item.harga}</span></div>      <div class="detail-field"><span class="detail-label">Socket</span><span class="detail-value">Single socket (sesuai syarat)</span></div>
     `;
     modalWa.onclick = () => {
       const wa = item.wa;
@@ -118,6 +210,11 @@
     } else {
       profileSection.classList.add('active');
       document.querySelector('[data-section="profile"]').classList.add('active');
+       setTimeout(() => {
+        if (window.AOS) {
+          AOS.refresh();
+        }
+      }, 150);
     }
   }
   navLinks.forEach(link => {
@@ -156,6 +253,16 @@
       // Gunakan FormData langsung (mendukung file upload)
       const formData = new FormData(penawaranForm);
       formData.set('form-name', penawaranForm.getAttribute('name') || 'panelPenawaran');
+
+      // Bersihkan format harga (hapus titik) sebelum dikirim
+        const hargaInput = penawaranForm.querySelector('input[name="hargaUnit"]');
+          if (hargaInput) {
+            let hargaValue = hargaInput.value;
+           // Hapus semua titik (pemisah ribuan) dan karakter non-digit lainnya
+            let cleanHarga = hargaValue.replace(/\./g, '');
+           // Timpa nilai di FormData dengan yang sudah dibersihkan
+        formData.set('hargaUnit', cleanHarga);
+}
 
       try {
         const endpoint = penawaranForm.getAttribute('action') || window.location.pathname;
@@ -213,6 +320,33 @@
     const card = e.target.closest('.card');
     if (card) openDetail(card.dataset.id);
   });
+  // ambil input harga
+const priceInput = document.getElementById("price");
 
+// fungsi format rupiah
+function formatRupiah(angka) {
+    let numberString = angka.replace(/[^,\d]/g, "").toString();
+    let split = numberString.split(",");
+    let sisa = split[0].length % 3;
+    let rupiah = split[0].substr(0, sisa);
+    let ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+    if (ribuan) {
+        let separator = sisa ? "." : "";
+        rupiah += separator + ribuan.join(".");
+    }
+
+    rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+    return rupiah;
+}
+
+priceInput.addEventListener("input", function(e) {
+    let value = e.target.value;
+
+    if (value) {
+        e.target.value = formatRupiah(value);
+    }
+});
   showSection('home');
 })();
+
